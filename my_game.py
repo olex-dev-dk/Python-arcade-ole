@@ -13,7 +13,7 @@ import arcade
 SPRITE_SCALING = 0.5
 
 # Set the size of the screen
-SCREEN_WIDTH = 800
+SCREEN_WIDTH = 1600
 SCREEN_HEIGHT = 600
 
 # Variables controlling the player
@@ -21,7 +21,7 @@ PLAYER_LIVES = 3
 PLAYER_SPEED_X = 5
 PLAYER_START_X = SCREEN_WIDTH / 2
 PLAYER_START_Y = 50
-PLAYER_SHOT_SPEED = 4
+PLAYER_SHOT_SPEED = 10
 
 FIRE_KEY = arcade.key.SPACE
 
@@ -142,7 +142,7 @@ class MyGame(arcade.Window):
 
             #self.joystick.
         # Set the background color
-        arcade.set_background_color(arcade.color.AMAZON)
+        arcade.set_background_color(arcade.color.HOT_MAGENTA)
 
     def setup(self):
         """ Set up the game and initialize the variables. """
@@ -214,13 +214,13 @@ class MyGame(arcade.Window):
         """
 
         # Track state of arrow keys
-        if key == arcade.key.UP:
+        if key == arcade.key.W:
             self.up_pressed = True
-        elif key == arcade.key.DOWN:
+        elif key == arcade.key.S:
             self.down_pressed = True
-        elif key == arcade.key.LEFT:
+        elif key == arcade.key.A:
             self.left_pressed = True
-        elif key == arcade.key.RIGHT:
+        elif key == arcade.key.D:
             self.right_pressed = True
 
         if key == FIRE_KEY:
@@ -236,13 +236,13 @@ class MyGame(arcade.Window):
         Called whenever a key is released.
         """
 
-        if key == arcade.key.UP:
+        if key == arcade.key.W:
             self.up_pressed = False
-        elif key == arcade.key.DOWN:
+        elif key == arcade.key.S:
             self.down_pressed = False
-        elif key == arcade.key.LEFT:
+        elif key == arcade.key.A:
             self.left_pressed = False
-        elif key == arcade.key.RIGHT:
+        elif key == arcade.key.D:
             self.right_pressed = False
 
     def on_joybutton_press(self, joystick, button_no):
