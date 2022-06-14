@@ -142,7 +142,7 @@ class MyGame(arcade.Window):
 
             #self.joystick.
         # Set the background color
-        arcade.set_background_color(arcade.color.HOT_MAGENTA)
+        arcade.set_background_color(arcade.color.LAVA)
 
     def setup(self):
         """ Set up the game and initialize the variables. """
