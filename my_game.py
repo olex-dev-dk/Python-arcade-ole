@@ -59,7 +59,10 @@ class Player(arcade.Sprite):
             self.left = 0
         elif self.right > SCREEN_WIDTH - 1:
             self.right = SCREEN_WIDTH - 1
-
+        elif self.bottom < 0:
+            self.bottom = 0
+        elif self.top > SCREEN_HEIGHT - 1:
+            self.top = SCREEN_HEIGHT - 1
 
 class PlayerShot(arcade.Sprite):
     """
