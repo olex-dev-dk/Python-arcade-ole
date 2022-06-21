@@ -201,7 +201,7 @@ class MyGame(arcade.Window):
             self.player_sprite.change_x = -PLAYER_SPEED_X
         elif self.right_pressed and not self.left_pressed:
             self.player_sprite.change_x = PLAYER_SPEED_X
-        elif self.up_pressed and not self.down_pressed:
+        if self.up_pressed and not self.down_pressed:
             self.player_sprite.change_y = PLAYER_SPEED_Y
         elif self.down_pressed and not self.up_pressed:
             self.player_sprite.change_y = -PLAYER_SPEED_Y
